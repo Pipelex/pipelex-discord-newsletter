@@ -25,6 +25,7 @@ expression = "discord_channel_update.name"
 pipe_map = { "Introduce-Yourself" = "summarize_discord_channel_update_for_new_members" }
 default_pipe_code = "summarize_discord_channel_update_general"
 
+
 [pipe.summarize_discord_channel_update_for_new_members]
 PipeLLM = "Summarize the new member announcements"
 inputs = { discord_channel_update = "DiscordChannelUpdate" }
@@ -119,4 +120,3 @@ $weekly_summary
    {% endfor %}
 {% endif %}
 """
-
