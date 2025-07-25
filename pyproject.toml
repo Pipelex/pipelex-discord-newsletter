@@ -1,5 +1,5 @@
 [project]
-name = "my-project"
+name = "discord-newsletter"
 version = "0.0.1"
 description = "Replace this with your project description"
 # authors = [{ name = "Your Name", email = "your.email@example.com" }]
@@ -12,7 +12,10 @@ classifiers = [
     "Operating System :: OS Independent",
 ]
 
-dependencies = ["pipelex[mistralai,anthropic,google,bedrock,fal] @ git+https://github.com/Pipelex/pipelex.git@dev"]
+dependencies = [
+    "pipelex[mistralai,anthropic,google,bedrock,fal] @ git+https://github.com/Pipelex/pipelex.git@dev",
+    "typer[all]",
+]
 
 [project.optional-dependencies]
 dev = [
@@ -36,14 +39,14 @@ dev = [
 
 [project.urls]
 Homepage = "https://pipelex.com"
-Repository = "https://github.com/yourusername/my-project"  # Replace with your repository URL
+Repository = "https://github.com/yourusername/discord-newsletter"  # Replace with your repository URL
 Documentation = "https://docs.pipelex.com/"
 
 [tool.uv]
 required-version = ">=0.7.2"
 
 [tool.mypy]
-packages = ["my_project"]
+packages = ["discord_newsletter"]
 check_untyped_defs = true
 exclude = "^.*\\.venv/.*$"
 mypy_path = "."
@@ -57,7 +60,7 @@ ignore_missing_imports = true
 module = ["json2html"]
 
 [tool.pyright]
-include = ["my_project"]
+include = ["discord_newsletter"]
 analyzeUnannotatedFunctions = true
 deprecateTypingAliases = false
 disableBytesTypePromotions = true
