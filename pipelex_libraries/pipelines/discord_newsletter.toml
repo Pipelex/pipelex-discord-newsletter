@@ -120,3 +120,4 @@ $weekly_summary
    {% endfor %}
 {% endif %}
 """
+
